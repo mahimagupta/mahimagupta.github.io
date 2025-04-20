@@ -1,95 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal Portfolio">
-  <title>Mahima Gupta | Software Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .intro {
-      text-align: center;
-      padding: 50px;
-    }
-    .intro h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-  	footer {
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .social-icons a {
-      font-size: 2em;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .social-icons a.linkedin {
-      color: #0077b5; /* LinkedIn Blue */
-    }
-    .social-icons a.github {
-      color: #333; /* GitHub Black */
-    }
-    .social-icons a.email {
-      color: #D44638; /* Email Red */
-    }
-    .social-icons a.x {
-      color: #1DA1F2; /* X (Twitter) Blue */
-    }
-    .social-icons a:hover {
-      opacity: 0.7; /* Slight fade effect on hover */
-    }
-    footer p {
-      margin-top: 20px;
-      font-size: 1em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahima Gupta| Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom styles for subtle animations */
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .icon-hover:hover {
+            color: #2563eb; /* Tailwind blue-600 */
+            transition: color 0.3s ease-in-out;
+        }
+        .profile-img {
+            border: 4px solid #e5e7eb; /* Tailwind gray-200 */
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
-<body>
-  <section class="intro">
-    <h1>Hi, I'm Mahima Gupta 👋</h1>
-    <p>I'm a Backend Software Engineer, passionate about building scalable systems and solving complex challenges.</p>
-  </section>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- Header -->
+    <header class="bg-white py-12 text-center">
+        <div class="container mx-auto px-4">
+            <!-- <img src="Mahima_Gupta.jpg" alt="Your Profile Photo" class="w-32 h-32 rounded-full mx-auto mb-4 profile-img fade-in" style="animation-delay: 0.2s;"> -->
+            <h1 class="text-5xl font-bold fade-in" style="animation-delay: 0.4s;">Mahima Gupta</h1>
+            <p class="text-xl mt-4 text-gray-600 fade-in" style="animation-delay: 0.6s;">Software Engineer | Building the Future with Code</p>
+            <div class="mt-6 flex justify-center space-x-6">
+                <a href="https://github.com/mahimagupta" class="text-gray-600 icon-hover fade-in" style="animation-delay: 0.8s;" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mahimagupta2795" class="text-gray-600 icon-hover fade-in" style="animation-delay: 0.8s;" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://x.com/mahimagupta2795" class="text-gray-600 icon-hover fade-in" style="animation-delay: 0.8s;" aria-label="Twitter">
+                    <i class="fab fa-x-twitter fa-2x"></i>
+                </a>
+                <a href="mailto:mahimagupta2795@gmail.com" class="text-gray-600 icon-hover fade-in" style="animation-delay: 0.8s;" aria-label="Email">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </header>
 
-   <!-- Let's Connect Section -->
-  <footer>
-    <h2>Let's Connect!</h2>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/mahimagupta2795/" class="linkedin" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/mahimagupta" class="github" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:mahimagupta2795@gmail.com" class="email" title="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://x.com/mahimagupta2795" class="x" target="_blank" title="X">
-         <i class="fab fa-x-twitter"></i>
-      </a>
-    </div>
-    <p>Email: <a href="mailto:mahimagupta2795@gmail.com" style="color: black;">mahimagupta2795@gmail.com</a></p>
+    <!-- About Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-center mb-8 fade-in" style="animation-delay: 0.2s;">About Me</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-lg text-gray-700 leading-relaxed fade-in" style="animation-delay: 0.4s;">
+                    I'm a passionate software engineer specializing in crafting elegant, efficient, and user-centric solutions. With expertise in Python, React, and APIs, I thrive on turning complex problems into intuitive experiences. When I'm not coding, you can find me exploring new tech trends or sipping coffee while brainstorming my next project.
+                </p>
+            </div>
+        </div>
+    </section>
 
-  </footer>
+    <!-- About My Journey Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-center mb-12 fade-in" style="animation-delay: 0.2s;">About My Journey</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Passionate About -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale fade-in" style="animation-delay: 0.4s;">
+                    <i class="fas fa-code fa-2x text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Passionate About</h3>
+                    <p class="text-gray-600">
+                        Creating technology that empowers and connects people. From building intuitive APIs to crafting seamless React interfaces, I love using Python and JavaScript to solve real-world problems and make a lasting impact.
+                    </p>
+                </div>
+                <!-- Driven By -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale fade-in" style="animation-delay: 0.6s;">
+                    <i class="fas fa-lightbulb fa-2x text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Driven By</h3>
+                    <p class="text-gray-600">
+                        A relentless curiosity and desire to innovate. Whether it’s optimizing backend systems or exploring AI-driven tools, I’m fueled by the challenge of pushing boundaries and building solutions that redefine what’s possible.
+                    </p>
+                </div>
+                <!-- Outside of Work -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale fade-in" style="animation-delay: 0.8s;">
+                    <i class="fas fa-person-hiking fa-2x text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Outside of Work</h3>
+                    <p class="text-gray-600">
+                        You’ll find me hiking with friends, experimenting with new coffee brewing techniques, or diving into sci-fi novels. I also volunteer to mentor aspiring coders, sharing my love for tech and empowering the next generation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold text-center mb-8 fade-in" style="animation-delay: 0.2s;">Get in Touch</h2>
+            <div class="max-w-lg mx-auto text-center">
+                <p class="text-lg text-gray-700 mb-6 fade-in" style="animation-delay: 0.4s;">
+                    Interested in collaborating or just want to say hi? Drop me a line!
+                </p>
+                <a href="mailto:mahimagupta2795@gmail.com" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 fade-in" style="animation-delay: 0.6s;">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-gray-600 fade-in" style="animation-delay: 0.2s;">© 2025 Mahima Gupta. Built with passion and ☕.</p>
+        </div>
+    </footer>
 </body>
 </html>
